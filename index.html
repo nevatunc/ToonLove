@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToonLove – Cartoon Recommendations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">♥ ToonLove</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="filters">
+      <div class="filter-card">
+        <p class="intro">Tell ToonLove how you feel and we'll find the perfect cartoons for you.</p>
+
+        <div class="filter-group">
+          <h3>Mood</h3>
+          <div class="mood-grid" id="moodOptions">
+            <label class="pill"><input type="checkbox" value="Happy">Happy 😊</label>
+            <label class="pill"><input type="checkbox" value="Cozy">Cozy 🧸</label>
+            <label class="pill"><input type="checkbox" value="Chill">Chill ❄️</label>
+            <label class="pill"><input type="checkbox" value="Energetic">Energetic ⚡</label>
+            <label class="pill"><input type="checkbox" value="Sleepy">Sleepy 🌙</label>
+            <label class="pill"><input type="checkbox" value="Nostalgic">Nostalgic 💜</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Genres</h3>
+          <div class="checkbox-grid" id="genreOptions">
+            <label><input type="checkbox" value="Adventure">Adventure</label>
+            <label><input type="checkbox" value="Mystery">Mystery</label>
+            <label><input type="checkbox" value="Comedy">Comedy</label>
+            <label><input type="checkbox" value="Romance">Romance</label>
+            <label><input type="checkbox" value="Fantasy">Fantasy</label>
+            <label><input type="checkbox" value="Slice of Life">Slice of Life</label>
+            <label><input type="checkbox" value="Superhero">Superhero</label>
+            <label><input type="checkbox" value="Anime / Anime-style">Anime / Anime-style</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Style / Era</h3>
+          <div class="style-grid" id="styleOptions">
+            <label class="pill"><input type="checkbox" value="Classic">Classic / Nostalgic</label>
+            <label class="pill"><input type="checkbox" value="Modern">Modern</label>
+            <label class="pill"><input type="checkbox" value="Disney">Disney</label>
+            <label class="pill"><input type="checkbox" value="Scooby">Scooby-Doo & Friends</label>
+          </div>
+        </div>
+
+        <button id="recommendButton" class="primary-btn">Show me cartoons</button>
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="results-header">
+        <div>
+          <p class="eyebrow">Curated by feelings</p>
+          <h2>Your ToonLove recommendations</h2>
+        </div>
+        <div class="summary" id="summaryText">Pick a mood and genres to begin.</div>
+      </div>
+
+      <div id="featuredArea" class="featured hidden"></div>
+      <div id="resultsGrid" class="card-grid"></div>
+      <div id="emptyState" class="empty hidden">No toons match your current filters. Try changing your mood or genres.</div>
+    </section>
+  </main>
+
+  <footer class="footer">Made with ♥ for cozy cartoon nights.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
